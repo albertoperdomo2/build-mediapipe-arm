@@ -9,7 +9,7 @@ NVIDIA Jetson Nano - Ubuntu 18.04
 
 ## Steps to build MediaPipe Python API on Ubuntu 18.04
 
-1. Clone the [MediaPipe](https://github.com/google/mediapipe) repo and checkout to the proper release. 
+1. Clone the [MediaPipe](https://github.com/google/mediapipe) repo and checkout to the proper release.
 Clone the repo:
 ```
 git clone https://github.com/google/mediapipe.git
