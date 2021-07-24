@@ -96,5 +96,5 @@ python3 -m pip install mediapipe/dist/mediapipe-0.8-cp37-cp37m-linux_aarch64.whl
 
 **Note:** The filename may be different in your case. If the installation fails due to missing dependencies, append `--no-deps` to the previous command line.
 
-## Verify the installation. 
+## Verify installation. 
 In order to verify the installation, you can run the example script found in this repo (make sure you change to `/path/to/pic.jpg` and `/path/to/pic2.jpg` to your example files).
