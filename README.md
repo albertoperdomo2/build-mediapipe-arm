@@ -21,14 +21,13 @@ cd mediapipe && git checkout 0.8.1
 ```
 
 2. Install pre-requisites and build dependencies.
-````
+```
 sudo apt install -y python3-dev
 sudo apt install -y cmake
 sudo apt install -y protobuf-compiler
 ```
 
 If there are any.proto error later, it usually means that the protoc version is too old. Therefore, you can download the latest version from their [GitHub releases page](https://github.com/protocolbuffers/protobuf/releases), making sure that you download the appropriate version (`protoc-3.x.x-linux-aarch_64.zip`). Then, you need to copy the files to the system directories. For example:
-
 ```
 mkdir latest-protoc && cd latest-protoc
 curl https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protoc-3.17.3-linux-aarch_64.zip
@@ -38,7 +37,6 @@ sudo cp bin/protoc /usr/local/bin
 ```
 
 Finally, modify the `mediapipe/setup.py` with the protoc command (you can find the exact line of code using any code searching tool, e.g. `ag "protoc_command" ./setup.py`):
-
 ```
 -      protoc_command = [self._protoc, '-I.', '--python_out=.', source]
 +      protoc_command = [self._protoc, '-I.', '-I/usr/local/include', '--python_out=.', source]
